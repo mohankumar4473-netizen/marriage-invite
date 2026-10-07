@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mohan Kumar & Priya | Wedding Invitation</title>
+<title>Mohan Kumar & Arthi | Wedding Invitation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -13,130 +13,417 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    background: #fff8f5;
-    color: #5b4040;
+    min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
+    color: #542d32;
+    background: #160d0b;
 }
 
+/* MAIN TEMPLE BACKGROUND */
 .hero {
     min-height: 100vh;
+    padding: 35px 15px 70px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 25px 15px;
+    align-items: center;
+
     background:
-        radial-gradient(circle at 10% 10%, #f7d8dc 0, transparent 25%),
-        radial-gradient(circle at 90% 90%, #dcefdc 0, transparent 25%),
-        #fffaf7;
+        linear-gradient(
+            rgba(45, 18, 10, 0.30),
+            rgba(45, 18, 10, 0.45)
+        ),
+        url("temple-wedding.png") center center / cover fixed;
+
+    position: relative;
+    overflow: hidden;
 }
 
+/* GOLD GLOW */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 215, 130, 0.20),
+            transparent 55%
+        );
+    pointer-events: none;
+}
+
+/* INVITATION CARD */
 .card {
-    width: 100%;
-    max-width: 650px;
-    padding: 50px 25px;
-    border: 1px solid #ead4d0;
-    border-radius: 28px;
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 20px 60px rgba(103,67,67,0.12);
+    width: min(680px, 100%);
+    padding: 50px 28px;
+    position: relative;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(255, 248, 231, 0.96),
+            rgba(255, 244, 220, 0.94)
+        );
+
+    border: 3px solid #d7a84b;
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 0 8px rgba(255, 220, 145, 0.15),
+        0 25px 80px rgba(0,0,0,0.45);
 }
 
-.flowers {
-    font-size: 40px;
+/* DECORATIVE TOP */
+.ornament {
+    font-size: 42px;
+    color: #9c651e;
     margin-bottom: 15px;
 }
 
+/* SMALL TEXT */
 .small {
-    text-transform: uppercase;
-    letter-spacing: 4px;
     font-size: 11px;
-    color: #8b6868;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #8b5a43;
 }
 
+/* NAMES */
 h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(55px, 14vw, 90px);
-    font-weight: 400;
-    line-height: 1;
     margin: 18px 0 5px;
-    color: #704c55;
+
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(58px, 13vw, 100px);
+    line-height: 0.95;
+    font-weight: 400;
+
+    color: #741f2b;
+
+    text-shadow:
+        1px 1px 0 #d9a84e;
 }
 
 .and {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
+    font-size: 34px;
+    color: #a46c25;
     font-style: italic;
-    color: #a77a7a;
 }
 
+/* DIVIDER */
 .divider {
-    width: 90px;
-    margin: 25px auto;
-    border-top: 1px solid #d9bcbc;
+    width: 130px;
+    margin: 30px auto;
+
+    border-top: 2px solid #c9983e;
+
+    position: relative;
 }
 
+.divider::before,
+.divider::after {
+    content: "✦";
+    position: absolute;
+    top: -13px;
+
+    color: #b77b27;
+    font-size: 18px;
+}
+
+.divider::before {
+    left: -18px;
+}
+
+.divider::after {
+    right: -18px;
+}
+
+/* INVITE TEXT */
+.invite {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #6f4232;
+}
+
+/* DATE */
 .date {
+    margin-top: 25px;
+
     font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 600;
-    margin-top: 20px;
+    font-size: 38px;
+    font-weight: 700;
+
+    color: #741f2b;
 }
 
-.place {
-    font-size: 14px;
-    line-height: 1.8;
-    margin-top: 8px;
+.date span {
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+
+    color: #8b5a43;
 }
 
+/* DETAILS */
+.details {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.details strong {
+    font-size: 18px;
+    color: #741f2b;
+}
+
+/* MESSAGE */
 .message {
+    margin: 35px auto 10px;
+
+    max-width: 500px;
+
     font-family: 'Cormorant Garamond', serif;
-    font-size: 21px;
+    font-size: 23px;
     line-height: 1.5;
-    margin-top: 30px;
+
+    color: #633c32;
 }
 
+/* BUTTONS */
 .buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 30px;
+    gap: 15px;
+
+    margin-top: 35px;
 }
 
 .btn {
+    padding: 14px 24px;
+
+    border-radius: 50px;
+
     text-decoration: none;
-    padding: 13px 20px;
-    border-radius: 30px;
-    border: 1px solid #b98d96;
-    color: #704c55;
-    background: white;
+
     font-size: 13px;
     font-weight: 600;
+
+    border: 2px solid #a96e2c;
+
+    transition: 0.3s;
 }
 
-.btn.primary {
-    background: #704c55;
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.location {
+    background: #741f2b;
     color: white;
 }
 
-footer {
-    margin-top: 30px;
+.wishes {
+    background: #fff9ec;
+    color: #741f2b;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 35px;
+
     font-size: 10px;
-    letter-spacing: 3px;
-    color: #987979;
+    letter-spacing: 4px;
+
+    color: #936d51;
+}
+
+/* =========================
+   FLYING BUTTERFLIES
+========================= */
+
+.butterfly {
+    position: fixed;
+    z-index: 10;
+
+    font-size: 28px;
+
+    pointer-events: none;
+
+    animation:
+        fly 14s linear infinite,
+        flutter 1s ease-in-out infinite alternate;
+}
+
+.b1 {
+    left: -10%;
+    top: 30%;
+    animation-delay: 0s;
+}
+
+.b2 {
+    left: -15%;
+    top: 65%;
+    animation-delay: 4s;
+}
+
+.b3 {
+    left: -20%;
+    top: 15%;
+    animation-delay: 8s;
+}
+
+@keyframes fly {
+
+    0% {
+        transform: translateX(-10vw) translateY(0) rotate(5deg);
+    }
+
+    25% {
+        transform: translateX(30vw) translateY(-60px) rotate(-10deg);
+    }
+
+    50% {
+        transform: translateX(60vw) translateY(50px) rotate(8deg);
+    }
+
+    75% {
+        transform: translateX(90vw) translateY(-70px) rotate(-8deg);
+    }
+
+    100% {
+        transform: translateX(120vw) translateY(20px) rotate(5deg);
+    }
+}
+
+@keyframes flutter {
+
+    from {
+        margin-top: -8px;
+    }
+
+    to {
+        margin-top: 8px;
+    }
+}
+
+/* =========================
+   FLOATING FLOWER PETALS
+========================= */
+
+.petal {
+    position: fixed;
+    top: -30px;
+
+    z-index: 5;
+
+    font-size: 18px;
+
+    pointer-events: none;
+
+    animation: fall 10s linear infinite;
+}
+
+.p1 {
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.p2 {
+    left: 40%;
+    animation-delay: 4s;
+}
+
+.p3 {
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.p4 {
+    left: 85%;
+    animation-delay: 6s;
+}
+
+@keyframes fall {
+
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(100px)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 15px 10px 50px;
+        background-attachment: scroll;
+    }
+
+    .card {
+        padding: 40px 18px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .date {
+        font-size: 32px;
+    }
+
+    .message {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 85%;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- FLYING BUTTERFLIES -->
+<div class="butterfly b1">🦋</div>
+<div class="butterfly b2">🦋</div>
+<div class="butterfly b3">🦋</div>
+
+<!-- FLOWING PETALS -->
+<div class="petal p1">🌸</div>
+<div class="petal p2">🌺</div>
+<div class="petal p3">🌸</div>
+<div class="petal p4">🌺</div>
+
 <section class="hero">
 
 <div class="card">
 
-<div class="flowers">🌸 ❀ 🌿</div>
+<div class="ornament">
+🪷
+</div>
 
 <div class="small">
 Together with their families
@@ -144,24 +431,39 @@ Together with their families
 
 <h1>Mohan Kumar</h1>
 
-<div class="and">&amp;</div>
+<div class="and">
+&amp;
+</div>
 
-<h1>Priya</h1>
+<h1>Arthi</h1>
 
 <div class="divider"></div>
 
-<div class="small">
-Invite you to celebrate their wedding
+<div class="invite">
+Invite you to celebrate<br>
+their wedding
 </div>
 
 <div class="date">
-15 November 2026
+22
+<span>NOVEMBER · 2026</span>
 </div>
 
-<div class="place">
-Sunday · Muhurtham 10:30 AM – 12:00 PM
+<div class="details">
+
+<strong>Sunday</strong>
 <br>
-<strong>Sri Lakshmi Mahal, Krishnagiri</strong>
+
+Muhurtham
+<strong>10:30 AM – 12:00 PM</strong>
+
+<br><br>
+
+<strong>Shri Harishwar Mahal</strong>
+<br>
+
+Mallapadi
+
 </div>
 
 <p class="message">
@@ -174,23 +476,27 @@ on our special day.
 
 <div class="buttons">
 
-<a class="btn primary"
-href="https://www.google.com/maps/search/?api=1&query=Sri+Lakshmi+Mahal+Krishnagiri"
-target="_blank">
+<a
+class="btn location"
+href="https://www.google.com/maps/search/?api=1&query=Shri+Harishwar+Mahal+Mallapadi"
+target="_blank"
+rel="noopener">
 📍 View Location
 </a>
 
-<a class="btn"
-href="https://wa.me/?text=Congratulations%20Mohan%20Kumar%20%26%20Priya%20%F0%9F%92%90"
-target="_blank">
+<a
+class="btn wishes"
+href="https://wa.me/?text=Congratulations%20Mohan%20Kumar%20%26%20Arthi%20%F0%9F%92%90"
+target="_blank"
+rel="noopener">
 💌 Send Wishes
 </a>
 
 </div>
 
-<footer>
-WITH LOVE · MOHAN &amp; PRIYA
-</footer>
+<div class="footer">
+WITH LOVE · MOHAN &amp; ARTHI
+</div>
 
 </div>
 
