@@ -1,1 +1,103 @@
-
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohankumar weds Arthi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;height:100%;background:#1b1710;overflow:hidden}
+#wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#stage{position:relative;width:720px;height:1280px;flex:none;transform-origin:center center;overflow:hidden;background:#fbf3d5;font-family:'Cinzel',Georgia,serif}
+.sl{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;pointer-events:none}
+.sl.on{opacity:1}
+.bg{position:absolute;inset:0;width:100%;height:100%;transform-origin:50% 50%}
+.sl.on .bg{animation:kb 14s ease-out forwards}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.035)}}
+.t{position:absolute;left:0;width:720px;text-align:center;height:100px;line-height:100px;white-space:nowrap;opacity:0;transform:translateY(16px);transition:opacity 1.2s ease,transform 1.2s ease}
+.sl.on .t{opacity:1;transform:none}
+.sl.on .d1{transition-delay:.5s}.sl.on .d2{transition-delay:1.1s}.sl.on .d3{transition-delay:1.7s}.sl.on .d4{transition-delay:2.3s}
+.nm{font-family:'Pinyon Script','Great Vibes',cursive;font-size:112px;background:linear-gradient(180deg,#9a8841,#6a5a24);-webkit-background-clip:text;background-clip:text;color:transparent;height:130px;line-height:130px}
+.cp{font-weight:700;color:#6a5834;font-size:27px;letter-spacing:.04em;height:50px;line-height:50px}
+.lc{font-weight:600;color:#7a6a45;font-size:24px;letter-spacing:.07em;height:44px;line-height:44px}
+.gr{font-weight:700;color:#1f4222;line-height:100px}
+sup{font-size:.55em;vertical-align:.7em;line-height:0}
+#qr{position:absolute;left:253px;top:746px;width:214px;height:214px;display:block;pointer-events:auto}
+#qr img{width:100%;height:100%;display:block}
+#start{position:absolute;inset:0;z-index:9;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fbf3d5 center/cover;cursor:pointer;transition:opacity .9s}
+#start.gone{opacity:0;pointer-events:none}
+#start .nm{font-size:120px}
+#start .w{font-size:30px;letter-spacing:.2em;color:#6a5834;font-weight:600;margin:6px 0}
+#start .tap{margin-top:60px;border:1px solid #9a4f7c;color:#9a4f7c;padding:14px 44px;border-radius:40px;letter-spacing:.2em;font-size:22px}
+#cv{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+.paused .bg{animation-play-state:paused}
+#pz{position:absolute;inset:0;z-index:8;display:none;align-items:center;justify-content:center;pointer-events:none}
+#pz i{width:150px;height:150px;border-radius:50%;background:#fbf3d5cc;border:2px solid #9a4f7c;color:#9a4f7c;font-style:normal;font-size:70px;display:flex;align-items:center;justify-content:center;padding-left:10px}
+#mute{position:absolute;top:16px;right:16px;z-index:10;display:none;width:54px;height:54px;border-radius:50%;border:1px solid #9a4f7c;background:#fffa;color:#9a4f7c;font-size:26px;cursor:pointer}
+</style></head><body>
+<div id="wrap"><div id="stage">
+<div class="sl" id="s0"><img class="bg" src="assets/bg0.jpg" alt=""><canvas id="cv" width="540" height="960"></canvas>
+ <div class="t d1" style="top:333px;transition-delay:2.6s;font-weight:700;font-size:38px;color:#8c2430;letter-spacing:.03em">22<sup>ND</sup> NOV, 2026.</div></div>
+<div class="sl" id="s1"><img class="bg" src="assets/bg1.jpg" alt="">
+ <img class="t d1" alt="" style="left:0;right:0;margin:0 auto;left:8px;top:172px;width:200px;height:auto;line-height:0" src="assets/symbol.png">
+ <div class="t d1 nm" style="top:520px;left:8px">Mohankumar</div>
+ <div class="t d2" style="left:8px;top:650px;height:100px;font-weight:600;font-size:30px;color:#5a4a2a;letter-spacing:.12em">WITH</div>
+ <div class="t d3 nm" style="top:750px;left:8px">Arthi</div></div>
+<div class="sl" id="s2"><img class="bg" src="assets/bg2.jpg" alt="">
+ <div class="t d1 cp" style="top:380px;left:8px">ON SUNDAY NOVEMBER 22ND 2026</div>
+ <div class="t d2 cp" style="top:425px;left:8px">7:30 AM TO 9:00 AM</div>
+ <div class="t d3 lc" style="top:493px;left:8px">G9JG+W89 CHINNA ROAD,</div>
+ <div class="t d4 lc" style="top:534px;left:8px">MALLAPADI, TAMIL NADU 635104</div></div>
+<div class="sl" id="s3"><img class="bg" src="assets/bg3.jpg" alt="">
+ <div class="t d1 gr" style="top:535px;left:4px;font-size:78px">22<sup>ND</sup></div>
+ <div class="t d1" style="top:590px;left:4px;height:100px"><svg width="260" height="20" viewBox="0 0 260 20" style="margin-top:40px"><path d="M0 10H112M148 10H260" stroke="#9a4f7c" stroke-width="2"/><path d="M130 2l8 8-8 8-8-8z" fill="#9a4f7c"/></svg></div>
+ <div class="t d2 gr" style="top:665px;left:4px;font-size:54px;letter-spacing:.04em">NOVEMBER 2026</div>
+ <div class="t d3" style="top:864px;left:4px;height:44px;line-height:44px;font-weight:600;font-size:24px;color:#9a4f7c;letter-spacing:.08em">WITH BEST COMPLIMENTS:</div>
+ <div class="t d4" style="top:900px;left:4px;height:44px;line-height:44px;font-weight:600;font-size:24px;color:#9a4f7c;letter-spacing:.08em">FAMILY, FRIENDS &amp; RELATIVES</div></div>
+<div class="sl" id="s4"><img class="bg" src="assets/bg4.jpg" alt="">
+ <a id="qr" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=G9JG%2BW89%20Mallapadi%2C%20Tamil%20Nadu"><img alt="Scan for location" src="assets/qr.png"></a></div>
+<div id="pz"><i>&#9654;</i></div>
+<button id="mute" aria-label="Mute music">&#9835;</button>
+<div id="start"><div class="nm">Mohankumar</div><div class="w">WEDS</div><div class="nm">Arthi</div><div class="tap">TAP TO OPEN</div></div>
+</div></div>
+<audio id="song" loop preload="auto" src="assets/song.m4a"></audio>
+<script>
+var IF=["assets/intro/00.jpg","assets/intro/01.jpg", /* ... one entry per frame, up to ... */ "assets/intro/35.jpg"];
+(function(){
+var st=document.getElementById('stage'),pz=document.getElementById('pz'),song=document.getElementById('song'),mute=document.getElementById('mute');
+function fit(){var k=Math.min(innerWidth/720,innerHeight/1280);st.style.transform='scale('+k+')';}
+fit();addEventListener('resize',fit);
+var S=[].slice.call(document.querySelectorAll('.sl')),T=[0,6.6,16.7,26.6,36.6],DUR=49.0;
+var cv=document.getElementById('cv'),cx=cv.getContext('2d');
+var FR=IF.map(function(u){var im=new Image();im.src=u;return im;});
+var t=0,last=0,run=false,paused=false,cur=-1;
+function show(i){if(i===cur)return;cur=i;S.forEach(function(s,k){s.classList.toggle('on',k===i);});document.getElementById('qr').style.pointerEvents=i===4?'auto':'none';}
+function draw(){var k=Math.max(0,Math.min(FR.length-1,Math.floor(t*15)));if(FR[k].complete)cx.drawImage(FR[k],0,0,540,960);cv.style.opacity=Math.max(0,Math.min(1,1-(t-2.2)/0.9));}
+function frame(now){
+ if(!run)return;
+ var dt=Math.max(0,(now-last)/1000);last=now;
+ if(!paused){
+  t+=Math.min(dt,0.1);
+  if(t>=DUR){t-=DUR;try{song.currentTime=t;song.play().catch(function(){});}catch(e){}}
+  var i=0;for(var k=0;k<T.length;k++)if(t>=T[k])i=k;
+  show(i);draw();
+  if(!song.paused&&Math.abs(song.currentTime-t)>0.7){try{song.currentTime=t;}catch(e){}}
+ }
+ requestAnimationFrame(frame);
+}
+function setPause(p){
+ paused=p;st.classList.toggle('paused',p);pz.style.display=p?'flex':'none';
+ if(p){song.pause();}else{try{song.currentTime=t;song.play().catch(function(){});}catch(e){}}
+}
+document.getElementById('start').addEventListener('click',function(e){
+ e.stopPropagation();this.classList.add('gone');mute.style.display='block';
+ try{song.currentTime=0;song.play().catch(function(){});}catch(x){}
+ t=0;last=performance.now();run=true;requestAnimationFrame(frame);
+});
+st.addEventListener('click',function(e){
+ if(!run)return;
+ if(e.target.closest&&(e.target.closest('#qr')||e.target.closest('#mute')))return;
+ setPause(!paused);
+});
+mute.addEventListener('click',function(){song.muted=!song.muted;mute.style.opacity=song.muted?.5:1;});
+document.addEventListener('visibilitychange',function(){if(document.hidden&&run&&!paused)setPause(true);});
+})();
+</script></body></html>
